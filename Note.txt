@@ -5,15 +5,7 @@
     + Stateful Component (Class)
     + Stateless Component (Function)
 
-
-
-    - baitap3/index
-        + header
-        + carousel
-        + wwd
-        + contact
-        + list
-            + item
-            + item
-            + item
-        + footer
+==== Buổi 2 =====
+    Rendering Elements: {}
+    Handling Events: onClick
+    State

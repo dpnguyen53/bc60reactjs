@@ -5,6 +5,8 @@ import "./App.css";
 import RenderingElements from "./rendering-elements";
 import HandlingEvents from "./handling-events";
 import State from "./state";
+import ExampleCar from "./example-car";
+import ListKeys from "./list-keys";
 
 function App() {
   return (
@@ -17,6 +19,51 @@ function App() {
       <HandlingEvents />
       <hr />
       <State />
+      <hr />
+      <ExampleCar />
+      <hr />
+      <ListKeys />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

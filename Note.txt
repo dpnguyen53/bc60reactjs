@@ -7,5 +7,7 @@
 
 ==== Buổi 2 =====
     Rendering Elements: {}
+    Rendering Condition
     Handling Events: onClick
-    State
+    State: Nếu state thay đổi thì render chạy lại
+    List keys

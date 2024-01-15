@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import data from "./DataFilms.json";
 
 export default class ListKeys extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ export default class ListKeys extends Component {
         { id: 2, name: "Lam" },
         { id: 3, name: "Phuc" },
       ],
+
+      listMovie: data,
     };
   }
 
@@ -22,6 +25,29 @@ export default class ListKeys extends Component {
         </li>
       );
     });
+  };
+
+  renderListMovie = () => {
+    const { listMovie } = this.state;
+    return (
+      <div className="container">
+        <div className="row">
+          {listMovie.map((movie) => {
+            return (
+              <div key={movie.maPhim} className="col-md-3">
+                <div className="card">
+                  <img className="card-img-top" src={movie.hinhAnh} alt="" />
+                  <div className="card-body">
+                    <h4 className="card-title">{movie.tenPhim}</h4>
+                    <p className="card-text">{movie.moTa}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
   };
 
   render() {
@@ -38,6 +64,7 @@ export default class ListKeys extends Component {
           })} */}
           {this.renderListUser()}
         </ul>
+        {this.renderListMovie()}
       </div>
     );
   }

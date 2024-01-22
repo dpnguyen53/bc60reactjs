@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class UserItem extends Component {
   render() {
-    const { user } = this.props;
+    const { user, deleteUser, editUser } = this.props;
     return (
       <tr>
         <td>{user.fullname}</td>
@@ -15,10 +15,20 @@ class UserItem extends Component {
             className="btn btn-info mr-2"
             data-toggle="modal"
             data-target="#modelIdUser"
+            onClick={() => {
+              editUser(user);
+            }}
           >
             Edit
           </button>
-          <button className="btn btn-danger">Delete</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              deleteUser(user.id);
+            }}
+          >
+            Delete
+          </button>
         </td>
       </tr>
     );

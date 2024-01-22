@@ -22,3 +22,9 @@
 ====== Buổi 4 ======
     - Shopping cart
     - Usermanagement
+
+====== Buổi 5 ======
+    - Usermanagement
+    - Form
+    - Lifecycle: componentWillReceiveProps
+    

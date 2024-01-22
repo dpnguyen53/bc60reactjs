@@ -3,9 +3,16 @@ import UserItem from "./UserItem";
 
 class Users extends Component {
   renderUsers = () => {
-    const { users } = this.props;
+    const { users, deleteUser, editUser } = this.props;
     return users.map((user) => {
-      return <UserItem key={user.id} user={user} />;
+      return (
+        <UserItem
+          key={user.id}
+          user={user}
+          deleteUser={deleteUser}
+          editUser={editUser}
+        />
+      );
     });
   };
 

@@ -7,7 +7,7 @@ export default class SanPham extends Component {
   };
 
   render() {
-    const { product } = this.props;
+    const { product, addToCart } = this.props;
     return (
       <div className="col-sm-4">
         <div className="card">
@@ -20,7 +20,14 @@ export default class SanPham extends Component {
             >
               Chi tiết
             </button>
-            <button className="btn btn-danger">Thêm giỏ hàng</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => {
+                addToCart(product);
+              }}
+            >
+              Thêm giỏ hàng
+            </button>
           </div>
         </div>
       </div>

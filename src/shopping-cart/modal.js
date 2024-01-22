@@ -1,6 +1,50 @@
 import React, { Component } from "react";
 
 export default class Modal extends Component {
+  renderCart = () => {
+    const { carts, updateQuantity, deleteProduct } = this.props;
+    return carts.map((product) => {
+      return (
+        <tr key={product.maSP}>
+          <td>{product.maSP}</td>
+          <td>{product.tenSP}</td>
+          <td>
+            <img src={product.hinhAnh} width={50} alt="" />
+          </td>
+          <td>
+            <button
+              onClick={() => {
+                updateQuantity(product.maSP, false);
+              }}
+            >
+              -
+            </button>
+            {product.soLuong}
+            <button
+              onClick={() => {
+                updateQuantity(product.maSP, true);
+              }}
+            >
+              +
+            </button>
+          </td>
+          <td>{product.giaBan}</td>
+          <td>{product.giaBan * product.soLuong}</td>
+          <td>
+            <button
+              className="btn btn-danger"
+              onClick={() => {
+                deleteProduct(product.maSP);
+              }}
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      );
+    });
+  };
+
   render() {
     return (
       <div
@@ -40,23 +84,7 @@ export default class Modal extends Component {
                     <th>thành tiền</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>VinSmart Live</td>
-                    <td>
-                      <img src="./img/vsphone.jpg" width={50} alt="" />
-                    </td>
-                    <td>
-                      <button>-</button>1<button>+</button>
-                    </td>
-                    <td>5700000</td>
-                    <td>5700000</td>
-                    <td>
-                      <button className="btn btn-danger">Delete</button>
-                    </td>
-                  </tr>
-                </tbody>
+                <tbody>{this.renderCart()}</tbody>
               </table>
             </div>
             <div className="modal-footer">

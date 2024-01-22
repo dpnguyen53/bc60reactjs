@@ -19,3 +19,6 @@
 
     - Shopping cart
 
+====== Buổi 4 ======
+    - Shopping cart
+    - Usermanagement
